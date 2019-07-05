@@ -12,10 +12,6 @@ module.exports = function(grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     watch: {
-      scsslint: {
-        files: 'scss/**/*.scss',
-        tasks: ['scsslint']
-      },
       css: {
         files: 'scss/**/*.scss',
         tasks: ['sass']
@@ -26,14 +22,6 @@ module.exports = function(grunt) {
         files: {
             'style.css' : 'scss/style.scss'
         }
-      }
-    },
-    scsslint: {
-      allFiles: [
-        'scss/**/*.scss'
-      ],
-      options: {
-        config: 'scss/.scss-lint.yml'
       }
     },
     browserSync: {
@@ -52,9 +40,8 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'scsslint', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
 };
