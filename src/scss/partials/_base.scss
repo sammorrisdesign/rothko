@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $f-sans-serif;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  transition: background-color 5s linear;
+}
+
+@for $i from 1 through $block-variants {
+  .body--color-#{$i} {
+    background-color: map-get($c-rothko, $i);
+  }
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

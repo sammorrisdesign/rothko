@@ -1,8 +1,10 @@
 Rothko
 ================
 
-The CSS Filters experiment that Mark Rothko could only dream of. This normally lives at [rothko.me](http://www.rothko.me).
+The CSS Filters experiment inspired by Mark Rothko. Full site lives at  [rothko.me](http://www.rothko.me).
 
 ## Usage
 
-Initial install to get dependencies; `bundle install` and `npm install`. Then use `Grunt` to watch and lint the sass.
+Requires Node 20 or above.
+
+Initial install to get dependencies; `npm i`. Then use `npm run start` to build the project and `npm run serve` to serve files locally.
